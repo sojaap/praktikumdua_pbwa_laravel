@@ -1,4 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
 ## Profile
 - Nama : Soja Purnamasari
 - NPM : 4523210104
@@ -74,7 +75,7 @@ Terdapat 3 Menu dalam pembelajaran kali ini:
   - Menampilkan pesan sambutan untuk pengunjung blog
 
 - Menambahkan Menu dengan menggunakan : 
-- ```html
+  ```html
    <h4>Berikut merupakan sub halaman:</h4>
         <p> Halaman Tentang Kami</p>
             <a href="/tentang-kami"> Lihat Halaman Tentang Kami</a>
@@ -89,7 +90,7 @@ Terdapat 3 Menu dalam pembelajaran kali ini:
   - File view baru untuk halaman **"Tentang Kami"**  
   - Berisi informasi terkait tentang LaraPress
   - Menambahkan Menu Kembali pada `about.blade.php` dengan menggunakan:
-  - ```html
+    ```html
     <h3> Menu Kembali </h3>
     <a href="/"> Kembali ke Halaman Utama</a> // Kembali ke menu utama
 
@@ -108,6 +109,128 @@ Terdapat 3 Menu dalam pembelajaran kali ini:
   - Menambahkan route baru `/kontak` yang mengarah ke view `contact.blade.php`  
 
 ## Langkah Implementasi
+### Step 1 : Memodifikasi Halaman Welcome 
+Mengubah file resources/views/welcome.blade.php dari tampilan default Laravel (266 baris) menjadi HTML sederhana dan menambahkan style sedikit agar rapih: 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selamat Datang di LaraPress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .contact-form { max-width: 400px; margin: auto; }
+        label { display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Blog LaraPress</h1>
+    <p>Ini adalah halaman utama dari aplikasi blog kita.</p>
+
+    <h4>Berikut merupakan sub halaman:</h4>
+        <p> Halaman Tentang Kami</p>
+            <a href="/tentang-kami"> Lihat Halaman Tentang Kami</a>
+        <br>
+        <p> Halaman Kontak</p>
+                <a href="/kontak"> Lihat Halaman Kontak</a>
+    <br>
+
+    <h3> Menu Kembali </h3>
+    <a href="/"> Kembali ke Halaman Utama</a>
+</body>
+</html>
+```
+### Step 2 : Membuat Route Baru
+Menambahkan route baru di `routes/web.php`:
+- Route yang ditambahkan diantaranya adalah `/tentang-kami` dan `/kontak`
+  ```php
+  <?php
+  use Illuminate\Support\Facades\Route;
+  Route::get('/', function () {
+    return view('welcome');
+  });
+
+  Route::get('/tentang-kami', function () {
+    return view('about');
+    });
+
+  Route::get('/kontak', function () {
+    return view('contact');
+    });
+
+  ```
+### Step 3 : Membuat View About (Tentang Kami)
+- Membuat File baru dengan konten Tentang Kami `resources/views/about.blade.php`
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selamat Datang di LaraPress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .contact-form { max-width: 400px; margin: auto; }
+        label { display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Blog LaraPress</h1>
+    <p>Ini adalah halaman utama dari aplikasi blog kita.</p>
+
+    <h4>Berikut merupakan sub halaman:</h4>
+        <p> Halaman Tentang Kami</p>
+            <a href="/tentang-kami"> Lihat Halaman Tentang Kami</a>
+        <br>
+        <p> Halaman Kontak</p>
+                <a href="/kontak"> Lihat Halaman Kontak</a>
+    <br>
+
+    <h3> Menu Kembali </h3>
+    <a href="/"> Kembali ke Halaman Utama</a>
+</body>
+</html>
+```
+### Step 4 : Membuat View Contact (Kontak)
+```html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .contact-form { max-width: 400px; margin: auto; }
+        label { display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form class="contact-form" method="POST" action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+    <br>
+    <h3> Menu Kembali </h3>
+    <a href="/"> Kembali ke Halaman Utama</a>
+</body>
+</html>
+```
 
 ## Reference
 - **[Laravel Documentation](https://laravel.com/docs/12.x/installation)**
+- Lisence : **[MIT Lisence](https://opensource.org/license/MIT)
