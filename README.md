@@ -16,22 +16,31 @@ Instalasi dilakukan dengan memastikan hal dibawah ini sudah ada:
 
 1. Install Laravell
    composer global require laravel/installer
-3. 
+3. Membuat Proyek Baru
+4. 
 
 ### Proyek LaraPress
 LaraPress merupakan blog sederhana yang dibangun dengan menggunakan Laravel 12 sebagai pembelajaran sederhana untuk tujuan pengembangan dan pembelajaran. LaraPress mendemonstrasikan konsep-konsep dasar Laravel seperti routing, views, dan struktur MVC.
 
 Terdapat 3 Menu dalam pembelajaran kali ini:
-- Menu Utama (Welcome Page)
-- Menu Tentang Kami (About)
-- Menu Kontak (Contact)
-
+#### Menu Utama (Welcome Page)
+#### Menu Tentang Kami (About)
+#### Menu Kontak (Contact)
 <img width="1918" height="1198" alt="Screenshot 2025-10-03 103552" src="https://github.com/user-attachments/assets/5acdfecc-538e-480d-a533-4f630b53bbf4" />
 
 ## Fitur Yang  DiImplementasikan
 ### Halaman Utama
+  - Mengubah tampilan default laravel menjadi tampilan blog sederhana
+  - Menampilkan judul "Selamat Datang di Blog LaraPress"
+  - Menggunakan Struktur HTML Sederhana
+  - Menambahkan Link Menu untuk Sub Menu
+
+<img width="1918" height="1198" alt="Screenshot 2025-10-03 103552" src="https://github.com/user-attachments/assets/5acdfecc-538e-480d-a533-4f630b53bbf4" />
+
 ### Halaman Tentang Kami (About)
+<img width="1918" height="1198" alt="Screenshot 2025-10-03 111907" src="https://github.com/user-attachments/assets/e67f9aa0-30b6-443c-bd54-30d50d6d7540" />
 ### Halaman Kontak (Contact)
+<img width="1918" height="1198" alt="Screenshot 2025-10-03 111939" src="https://github.com/user-attachments/assets/d07185ee-4acc-4fd8-8820-48ce185d2e56" />
 
 ### Premium Partners
 
@@ -43,18 +52,6 @@ Terdapat 3 Menu dalam pembelajaran kali ini:
 - **[DevSquad](https://devsquad.com/hire-laravel-developers)**
 - **[Redberry](https://redberry.international/laravel-development)**
 - **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
