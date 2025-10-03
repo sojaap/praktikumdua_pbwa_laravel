@@ -67,7 +67,8 @@ Terdapat 3 Menu dalam pembelajaran kali ini:
 - Menampilkan form pengisian kontak dengan isi tertera pada gambar
 - Menampilkan Menu kembali ke Halaman Utama
 
-<img width="1918" height="1198" alt="Screenshot 2025-10-03 111939" src="https://github.com/user-attachments/assets/d07185ee-4acc-4fd8-8820-48ce185d2e56" />
+<img width="1918" height="1197" alt="Screenshot 2025-10-03 130514" src="https://github.com/user-attachments/assets/6db222b6-5a0e-4aaa-a362-a5ae899505c0" />
+<img width="1918" height="1198" alt="Screenshot 2025-10-03 130436" src="https://github.com/user-attachments/assets/24f00083-dd5c-45be-ae17-c031ad17bf1c" />
 
 ### File yang dimodifikasi
 - `resources/views/welcome.blade.php`  
@@ -211,6 +212,11 @@ Menambahkan route baru di `routes/web.php`:
     </style>
 </head>
 <body>
+<h1>Contact Information</h1>
+<h3>Get in Touch</h3>
+<p> Name: Soja Purnamasari</p>
+<p> Email: soja.purnamasari@gmail</p>
+
     <h2>Contact Us</h2>
     <form class="contact-form" method="POST" action="#">
         <label for="name">Name</label>
@@ -231,6 +237,24 @@ Menambahkan route baru di `routes/web.php`:
 </html>
 ```
 
+# 🌐 Endpoint yang Tersedia
+
+| Route      | Method | Deskripsi                              |
+|------------|--------|----------------------------------------|
+| /        | GET    | Halaman utama LaraPress                |
+| /about   | GET    | Halaman tentang LaraPress              |
+| /contact | GET    | Halaman tentang Kontak    LaraPress    |
+
+---
+
+# 🖥️ Teknologi yang Digunakan
+
+- *Framework*: Laravel 12  
+- *PHP Version*: 8.4.2  
+- *Database*: MySQL  
+- *Frontend*: Blade Template Engine, HTML, CSS  
+- *Build Tool*: None
+- 
 ## Reference
 - **[Laravel Documentation](https://laravel.com/docs/12.x/installation)**
-- Lisence : **[MIT Lisence](https://opensource.org/license/MIT)
+- Lisence : [MIT Lisence](https://opensource.org/license/MIT)
