@@ -237,7 +237,7 @@ Menambahkan route baru di `routes/web.php`:
 </html>
 ```
 
-# 🌐 Endpoint yang Tersedia
+## Endpoint yang Tersedia
 
 | Route      | Method | Deskripsi                              |
 |------------|--------|----------------------------------------|
@@ -247,7 +247,7 @@ Menambahkan route baru di `routes/web.php`:
 
 ---
 
-# 🖥️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - *Framework*: Laravel 12  
 - *PHP Version*: 8.4.2  
