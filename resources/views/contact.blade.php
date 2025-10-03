@@ -13,6 +13,11 @@
     </style>
 </head>
 <body>
+<h1>Contact Information</h1>
+<h3>Get in Touch</h3>
+<p> Name: Soja Purnamasari</p>
+<p> Email: soja.purnamasari@gmail</p>
+
     <h2>Contact Us</h2>
     <form class="contact-form" method="POST" action="#">
         <label for="name">Name</label>
